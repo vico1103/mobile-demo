@@ -13,7 +13,7 @@ ext {
     core: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
   ]
 
-  kotlinRx = [
+  kotlinrx = [
     core: "io.reactivex.rxjava2:rxkotlin:$rx_kotlin_version"
   ]
 
