@@ -1,0 +1,16 @@
+/build
+gen/
+/trinerdis-utils/build.gradle
+/retrograph/build.gradle
+*.iml
+*.ipr
+*.iws
+local.properties
+/.gradle
+/.idea
+/captures
+/infer-out
+/keystores/*release*.*
+/keystores/*upload*.*
+**/.inferConfig
+*.apk
