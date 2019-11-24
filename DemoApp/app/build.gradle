@@ -1,10 +1,15 @@
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
 
 android {
+    dataBinding {
+        enabled = true
+    }
+
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
@@ -31,7 +36,11 @@ dependencies {
     implementation koin.values()
     implementation androidx.values()
 
+
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+  implementation 'androidx.navigation:navigation-fragment-ktx:2.1.0'
+  implementation 'androidx.navigation:navigation-ui-ktx:2.1.0'
 }
