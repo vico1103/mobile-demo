@@ -1,36 +1,60 @@
 package sk.vican.demoapp.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
+import sk.vican.basecomponents.ui.BaseActivity
 import sk.vican.demoapp.R
+import sk.vican.demoapp.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity: BaseActivity<MainViewModel, ActivityMainBinding>() {
 
-    // region Private Attributes
+  // region Private Attributes
 
-    private val navigationController: NavController by lazy {
-        findNavController(R.id.nav_host_fragment)
+  private val navigationController: NavController by lazy {
+    findNavController(R.id.nav_host_fragment).apply {
+      graph = navInflater.inflate(R.navigation.app_navigation).apply {
+        startDestination = R.id.fragment_download_image
+      }
     }
+  }
 
-    // endregion Private Attributes
+  // endregion Private Attributes
 
-    // region Public Methods
+  // region Protected Methods
 
-    override fun onSupportNavigateUp() = navigationController.navigateUp()
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
 
-    // endregion Public Methods
+    setupActionBarWithNavController(navigationController)
+  }
 
-    // region Protected Methods
+  override fun onSaveInstanceState(outState: Bundle) {
+    super.onSaveInstanceState(outState)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+    outState.putBundle(MainViewModel.SAVED_STATE, navigationController.saveState())
+  }
 
-        setupActionBarWithNavController(navigationController)
+  override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+    super.onRestoreInstanceState(savedInstanceState)
+
+    navigationController.restoreState(savedInstanceState.getBundle(MainViewModel.SAVED_STATE))
+  }
+
+  override fun onSupportNavigateUp(): Boolean {
+    return navigationController.navigateUp()
+  }
+
+  override fun onBackPressed() {
+    if (!navigationController.navigateUp()) {
+      finish()
     }
+  }
 
-    // endregion Protected Methods
+  override fun layoutId() = R.layout.activity_main
+
+  override fun viewModelClass() = MainViewModel::class
+
+  // endregion Protected Methods
 }

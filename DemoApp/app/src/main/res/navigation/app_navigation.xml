@@ -7,17 +7,22 @@
   >
   <fragment
     android:id="@+id/fragment_download_image"
-    android:name="sk.vican.demoapp.ui.main.MainFragment"
-    android:label="Stahnout obrazek"
+    android:name="sk.vican.demoapp.ui.downloadImage.DownloadFragment"
+    android:label="@string/download.title"
     tools:layout="@layout/fragment_download_image"
     >
-    <!--        <action-->
-    <!--            android:id="@+id/action_fragment_log_in_to_fragment_registration"-->
-    <!--            app:destination="@id/fragment_personal_information"-->
-    <!--            app:enterAnim="@anim/nav_default_enter_anim"-->
-    <!--            app:exitAnim="@anim/nav_default_exit_anim"-->
-    <!--            app:popEnterAnim="@anim/nav_default_pop_enter_anim"-->
-    <!--            app:popExitAnim="@anim/nav_default_pop_exit_anim"-->
-    <!--            />-->
+    <action
+      android:id="@+id/action_fragment_log_in_to_fragment_registration"
+      app:destination="@id/fragment_show_image"
+      app:enterAnim="@anim/nav_default_enter_anim"
+      app:exitAnim="@anim/nav_default_exit_anim"
+      app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+      app:popExitAnim="@anim/nav_default_pop_exit_anim"
+      />
   </fragment>
+  <fragment
+    android:id="@+id/fragment_show_image"
+    android:name="sk.vican.demoapp.ui.showImage.ShowImageFragment"
+    android:label="@string/show.title"
+    />
 </navigation>

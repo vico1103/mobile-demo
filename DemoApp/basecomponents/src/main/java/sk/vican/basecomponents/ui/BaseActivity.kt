@@ -36,5 +36,4 @@ abstract class BaseActivity<TViewModel: BaseViewModel, TViewBinding: ViewDataBin
   abstract fun viewModelClass(): KClass<TViewModel>
 
   // endregion Protected Methods
-
 }

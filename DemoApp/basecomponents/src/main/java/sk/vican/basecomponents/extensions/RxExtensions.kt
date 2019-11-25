@@ -1,8 +1,8 @@
 package sk.vican.basecomponents.extensions
 
-import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.disposables.*
 
-fun CompositeDisposable.disposeWith(compositeDisposable: CompositeDisposable) =
+fun Disposable.disposeWith(compositeDisposable: CompositeDisposable) =
   this.apply {
     compositeDisposable.add(this)
   }

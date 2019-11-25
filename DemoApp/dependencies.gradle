@@ -8,14 +8,19 @@ ext {
   retrofit_okhttp_version = '3.12.0'
   retrofit_interceptor_version = '3.11.0'
   rx_kotlin_version = "2.4.0-RC3"
+  rx_android_version = '2.1.1'
+  zoom_image_version = "1.2.0"
 
   kotlin = [
     core: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
   ]
 
-  kotlinrx = [
-    core: "io.reactivex.rxjava2:rxkotlin:$rx_kotlin_version"
+  rx = [
+    core: "io.reactivex.rxjava2:rxkotlin:$rx_kotlin_version",
+    android: "io.reactivex.rxjava2:rxandroid:$rx_android_version"
   ]
+
+
 
   koin = [
     core        : "org.koin:koin-androidx-scope:$koin_version",
@@ -37,5 +42,14 @@ ext {
     constraintlayout            : "androidx.constraintlayout:constraintlayout:$constraint_version",
     androidx_lifecycle_ext      : "androidx.lifecycle:lifecycle-extensions:$lifecycle_version",
     androidx_lifecycle_viewmodel: "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+  ]
+
+  androidx_navigation = [
+          fragment: "androidx.navigation:navigation-fragment-ktx:2.1.0",
+          ui: "androidx.navigation:navigation-ui-ktx:2.1.0"
+  ]
+
+  zoom_image = [
+    core: "com.jsibbold:zoomage:$zoom_image_version"
   ]
 }
