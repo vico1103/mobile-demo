@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="vertical_activity_margin">16dp</dimen>
+  <dimen name="horizontal_activity_margin">16dp</dimen>
+
+  <dimen name="height_text_input">68dp</dimen>
+  <dimen name="text_input_top_margin">56dp</dimen>
+  <dimen name="width_layout_landscape">400dp</dimen>
+</resources>

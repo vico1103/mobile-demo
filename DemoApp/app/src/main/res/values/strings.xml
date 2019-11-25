@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">DemoApp</string>
+    <string name="app_name">Vican</string>
+
+    <string name="download.title">Stiahnuť obrázok</string>
+    <string name="download.username">Prihlasovacie meno</string>
+    <string name="download.password">Heslo</string>
+    <string name="download.download_image">Stiahnuť obrázok</string>
+    <string name="download.show_image">Zobraziť obrázok</string>
+    <string name="download.remove_image">Vymazať obrázok</string>
+    <string name="download.no_filled_credential">Prosím vyplňte všetky prihlasovacie údaje</string>
+    <string name="download.bad_credential">Zadané prihlasovacie údaje nie sú správne alebo je problém zo sieťou</string>
+
+    <string name="show.title">Obrázok</string>
+
 </resources>

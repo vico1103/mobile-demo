@@ -1,2 +1,2 @@
-include ':app', ':basecomponents'
+include ':app', ':basecomponents', ':network', ':localstorage'
 rootProject.name='DemoApp'

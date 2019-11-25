@@ -50,5 +50,4 @@ abstract class BaseFragment<TViewModel: BaseViewModel, TViewDataBinding: ViewDat
   }
 
   // endregion Public Methods
-
 }
