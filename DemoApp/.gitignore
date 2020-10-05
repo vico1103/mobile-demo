@@ -1,6 +1,5 @@
 /build
 gen/
-/trinerdis-utils/build.gradle
 /retrograph/build.gradle
 *.iml
 *.ipr
