@@ -30,18 +30,6 @@ class MainActivity: BaseActivity<MainViewModel, ActivityMainBinding>() {
     setupActionBarWithNavController(navigationController)
   }
 
-  override fun onSaveInstanceState(outState: Bundle) {
-    super.onSaveInstanceState(outState)
-
-    outState.putBundle(MainViewModel.SAVED_STATE, navigationController.saveState())
-  }
-
-  override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-    super.onRestoreInstanceState(savedInstanceState)
-
-    navigationController.restoreState(savedInstanceState.getBundle(MainViewModel.SAVED_STATE))
-  }
-
   override fun onSupportNavigateUp(): Boolean {
     return navigationController.navigateUp()
   }
