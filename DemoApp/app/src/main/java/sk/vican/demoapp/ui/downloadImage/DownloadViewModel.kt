@@ -67,8 +67,7 @@ class DownloadViewModel(
 
   // region Private Methods
 
-  private fun isNotFilledSignIn() = username.value.isNullOrEmpty()
-    .or(password.value.isNullOrEmpty())
+  private fun isNotFilledSignIn() = username.value.isNullOrEmpty() || password.value.isNullOrEmpty()
 
   // endregion Private Methods
 }
